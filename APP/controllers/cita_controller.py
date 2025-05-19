@@ -25,7 +25,7 @@ class CitaController:
         return cursor.fetchall()
     
     def contar(self, busqueda='', estado=''):
-        cursor = self.conn.corsor()
+        cursor = self.conn.cursor()
         query = """
             SELECT COUNT(*)
             FROM citas c
