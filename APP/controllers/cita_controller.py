@@ -54,7 +54,7 @@ class CitaController:
         
     def eliminar(self, id):
         cursor = self.conn.cursor()
-        query = "DELETE FROM citas  WHERE=%s"
+        query = "DELETE FROM citas  WHERE id=%s"
         cursor.execute(query, (id,))
         self.conn.commit()
     
