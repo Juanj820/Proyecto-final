@@ -18,11 +18,11 @@ class DoctorController:
         return cursor.fetchall()
     
     def contar(self, busqueda='', estado=''):
-        cursor = self.conn.corsor()
+        cursor = self.conn.cursor()
         query = "SELECT COUNT (*) FROM dortores WHERE (nombre LIKE %s OR departamento LIKE %s)"
         params = [f"%{busqueda}%", f"%{busqueda}%"]
         if estado:
-            query += " AND c.estado = %s"
+            query += " AND estado = %s"
             params.append(estado)
         cursor.execute(query, tuple(params))
         return cursor.fetchone()[0]
