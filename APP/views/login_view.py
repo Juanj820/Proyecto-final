@@ -83,7 +83,7 @@ class LoginView:
         #Ajustar la posicion vertical para que el footer sea visible
         y=(self.root.winfo_screenheight()//2)-(height//2)-50
         #Centrar la ventana
-        self.root.geometry(f'{Width}x{height}+{x}+{y}')ç
+        self.root.geometry(f'{Width}x{height}+{x}+{y}')
     
     def login(self):
         usuario = self.usuario_entry.get()
