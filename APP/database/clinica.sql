@@ -65,7 +65,7 @@ CREATE TABLE `doctores` (
   `nombre` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `departamento` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `telefono` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `estado` enum(`Permanente`,`En Espera`) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `estado` enum('Permanente','En Espera') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `creado_por` int DEFAULT NULL,
   `creado_en` datetime DEFAULT CURRENT_TIMESTAMP,
   `actualizado_en` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -138,7 +138,7 @@ CREATE TABLE `citas` (
   `doctor_id` int DEFAULT NULL,
   `id_paciente` int DEFAULT NULL,
   `fecha` datetime DEFAULT NULL,
-  `estado` enum('Programada','En Consulta','Finalizada','Cancelada','No Asistio','Aprobada','Pendiente') CHARACTER SET utf8mb4_unicode_ci DEFAULT NULL,
+  `estado` enum('Programada','En Consulta','Finalizada','Cancelada','No Asistio','Aprobada','Pendiente') CHARACTER SET utf8mb4 COLLATE unicode_ci DEFAULT NULL,
   `creado_por` int DEFAULT NULL,
   `creado_en` datetime DEFAULT CURRENT_TIMESTAMP,
   `actualizado_en` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
