@@ -54,4 +54,4 @@ class PacienteView:
         self.table.column("telefono", width=100)
         self.table.column("direccion", width=140)
         self.table.column("estado", width=90)
-        self.table.pack(pady=10, fill="x")
+        self.table.pack(pady=10, fill="x")    
