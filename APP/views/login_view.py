@@ -2,7 +2,7 @@ import ttkbootstrap as tb
 from tkinter import messagebox
 import threading
 import time
-from PIL import Image, ImportTk
+from PIL import Image, ImageTk
 import os
 
 class LoginView:
