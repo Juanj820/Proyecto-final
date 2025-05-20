@@ -37,3 +37,21 @@ class PacienteView:
         # Contenedor principal para tabla y botones
         main_container = tb.Frame(self.frame)
         main_container.pack(fill="both", expand=True, padx=30, pady=5)
+        
+        # Table con espaciado lateral
+        table_frame = tb.Frame(main_container)
+        table_frame.pack(side="left", fill="both", expand=True,padx=(20, 20))
+        self.table = tb.Treeview(table_frame, columns=("id", "nombre", "sintomas", "direccion", "estado"), show="headings", height=7, bootstyle="info")
+        self.table.heading("id", text="ID")
+        self.table.heading("nombre", text="Nombre")
+        self.table.heading("sintomas", text="Sintomas")
+        self.table.heading("telefono", text="Teléfono")
+        self.table.heading("direccion", text="Dirección")
+        self.table.heading("estado", text="Estado")
+        self.table.column("id", width=40)
+        self.table.column("nombre", width=120)
+        self.table.column("sintomas", width=120)
+        self.table.column("telefono", width=100)
+        self.table.column("direccion", width=140)
+        self.table.column("estado", width=90)
+        self.table.pack(pady=10, fill="x")
